@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Enter Your Info
+{% endblock %}
+
+{% block content %}
+<form action='/horoscope'>
+    <p>
+        What is your name?
+        <input type="text" name="name"/>
+    </p>
+    <p>
+        <input type="checkbox" name="show_horoscopes"/>
+        Show Horoscopes
+    </p>
+    <p>
+        How many horoscopes do you want?
+        <select name="num_horoscopes">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+            <option value="6">Six</option>
+        </select>
+    </p>
+    <input type="submit">
+</form>
+{% endblock %}

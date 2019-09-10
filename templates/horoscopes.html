@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Receive Horoscopes!
+{% endblock %}
+
+{% block content %}
+<p>
+    {% if show_horscopes %}
+        Hello there, {{ name }}! Today's horoscope:
+        <ul>
+            {% for horoscope in horscopes_to_show %}
+                <li>{{% include 'horoscope.html' %}}.</li>
+            {% endfor %}
+    {% else %}
+        Have a nice day!
+    {% endif %}
+    </p>
+{% endblock %}
